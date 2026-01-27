@@ -24,6 +24,15 @@
 
 ## 2. 주요 기능
 
+- **학교 홈페이지 학식 정보 크롤링 **
+ <br> 새롭게 업데이트 되는 학식 정보를 주 단위로 크롤링하여 db에 저장합니다. 
+
+<p align="center">
+ <img width="665" height="642" alt="Image" src="https://github.com/user-attachments/assets/1fc730f8-dfa2-4199-8398-9daf73d3fccc" />
+</p>
+
+
+
 - **오늘의 학식 제공**
   <br>오늘 날짜를 기준으로 학식 메뉴를 자동 조회하여 사용자에게 제공합니다.
 
