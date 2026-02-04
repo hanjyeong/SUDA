@@ -25,7 +25,7 @@
 ## 2. 주요 기능
 
 - **학교 홈페이지 학식 정보 크롤링**
- <br> 새롭게 업데이트 되는 학식 정보를 주 단위로 크롤링하여 db에 저장합니다. 
+ <br> 새롭게 업데이트 되는 학식 정보를 크롤링하여 db에 저장합니다. 
 
 <p align="center">
  <img width="665" height="642" alt="Image" src="https://github.com/user-attachments/assets/1fc730f8-dfa2-4199-8398-9daf73d3fccc" />
