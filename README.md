@@ -64,9 +64,6 @@
 - Git / GitHub
 
 ---
-## 4. 트러블 슈팅 
 
----
-
-## 5. 커밋 컨벤션
+## 4. 커밋 컨벤션
 <img width="500" height="400" alt="Image" src="https://github.com/user-attachments/assets/324a3ca1-810b-41b8-88c7-1461ecd81a26" />
