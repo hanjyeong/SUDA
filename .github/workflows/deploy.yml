@@ -34,6 +34,15 @@ jobs:
       - name: 빌드된 파일 이름 변경하기
         run: mv ./build/libs/*SNAPSHOT.jar ./project.jar    # 빌드 파일 이름 project.jar로 변경
 
+      - name: EC2에 new 디렉터리 생성하기
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_PRIVATE_KEY }}
+          script_stop: true
+          script: |
+            mkdir -p /home/ubuntu/SUDA/new
 
       - name: SCP로 EC2에 빌드된 파일 전송하기
         uses: appleboy/scp-action@v0.1.7
@@ -57,8 +66,10 @@ jobs:
             sudo fuser -k -n tcp 8080 || true
 
             echo "Preparing deployment directories..."
-            rm -rf /home/ubuntu/current
-            mkdir -p /home/ubuntu/current
+            rm -rf /home/ubuntu/SUDA/current
+            mkdir -p /home/ubuntu/SUDA/current
+
+            echo "Deploying new jar file..."
             mv /home/ubuntu/SUDA/new/project.jar /home/ubuntu/SUDA/current/project.jar
 
             echo "Starting application..."
